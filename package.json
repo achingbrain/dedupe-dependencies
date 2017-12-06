@@ -1,0 +1,30 @@
+{
+  "name": "dedupe-dependencies",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "lint": "standard"
+  },
+  "bin": {
+    "dedupe-dependencies": "./bin/dedupe-dependencies.js"
+  },
+  "author": "Alex Potsides <alex@achingbrain.net>",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "pre-commit": "^1.2.2",
+    "standard": "^10.0.3",
+    "yargs": "^10.0.3"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "fs-extra": "^4.0.3",
+    "semver": "^5.4.1"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
+}
