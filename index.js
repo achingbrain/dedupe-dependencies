@@ -87,7 +87,10 @@ const dedupe = async (args) => {
   debug(JSON.stringify(doomedDependencies, null, 2))
 
   await Promise.all(
-    doomedDependencies.map(doomedDependency => fs.remove(doomedDependency))
+    doomedDependencies.map(doomedDependency => {
+      console.info(`Removing duplicate dependency ${doomedDependency}`)
+      return fs.remove(doomedDependency)
+    })
   )
 }
 
